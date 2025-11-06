@@ -39,6 +39,7 @@ const reviewRoutes = require('./routes/reviews');
 const addressRoutes = require('./routes/addresses');
 const wishlistRoutes = require('./routes/wishlist');
 const adminUserRoutes = require('./routes/admin/users');
+const adminProductRoutes = require('./routes/admin/products');
 const analyticsRoutes = require('./routes/admin/analytics');
 const cartRoutes = require('./routes/cart');
 
@@ -49,6 +50,7 @@ app.use('/api/reviews', reviewRoutes);
 app.use('/api/addresses', addressRoutes);
 app.use('/api/wishlist', wishlistRoutes);
 app.use('/api/admin/users', adminUserRoutes);
+app.use('/api/admin/products', adminProductRoutes);
 app.use('/api/admin/analytics', analyticsRoutes);
 app.use('/api/cart', cartRoutes);
 
