@@ -96,7 +96,19 @@ export const authAPI = {
   login: (credentials) => api.post("/auth/login", credentials),
   register: (userData) => api.post("/auth/register", userData),
   logout: () => api.post("/auth/logout"),
-  getProfile: () => api.get("/auth/profile"),
+  getProfile: () => api.get("/auth/me"),
+};
+
+export const orderAPI = {
+  create: (orderData) => api.post('/orders', orderData),
+  getAll: (params) => api.get('/orders', { params }),
+  getById: (id) => api.get(`/orders/${id}`),
+  cancel: (id) => api.post(`/orders/${id}/cancel`)
+};
+
+export const paymentAPI = {
+  create: (orderId) => api.post('/payment/create', { orderId }),
+  getTransaction: (id) => api.get(`/payment/transaction/${id}`)
 };
 
 export default api;

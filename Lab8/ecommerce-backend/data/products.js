@@ -1,0 +1,211 @@
+const products = [
+  // ===== Electronics =====
+  {
+    id: 1,
+    name: "Wireless Bluetooth Headphones",
+    description: "High-quality over-ear Bluetooth headphones with noise cancellation and long battery life.",
+    price: 120,
+    category: "Electronics",
+    stock: 75,
+    image: "https://images.unsplash.com/photo-1518445695753-1be9c5b1f42e",
+    rating: 4.6,
+    numReviews: 128,
+    brand: "SoundMax",
+    features: ["Bluetooth 5.0", "Noise Cancellation", "20h Battery"],
+    featured: true
+  },
+  {
+    id: 2,
+    name: "4K Smart LED TV 50-inch",
+    description: "Ultra HD Smart TV with built-in streaming apps and voice control functionality.",
+    price: 499,
+    category: "Electronics",
+    stock: 30,
+    image: "https://images.unsplash.com/photo-1583225152348-3e5c9b2e8c9f",
+    rating: 4.7,
+    numReviews: 342,
+    brand: "VisionTech",
+    features: ["4K UHD", "HDR10", "Voice Control"]
+  },
+  {
+    id: 3,
+    name: "Wireless Mouse",
+    description: "Ergonomic wireless mouse with adjustable DPI and long-lasting battery.",
+    price: 25,
+    category: "Electronics",
+    stock: 150,
+    image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+    rating: 4.3,
+    numReviews: 85,
+    brand: "TechEase",
+    features: ["Ergonomic Design", "Adjustable DPI", "Silent Click"]
+  },
+  {
+    id: 4,
+    name: "Portable Bluetooth Speaker",
+    description: "Compact speaker with rich sound, waterproof design, and 12-hour playtime.",
+    price: 80,
+    category: "Electronics",
+    stock: 100,
+    image: "https://images.unsplash.com/photo-1585386959984-a41552231693",
+    rating: 4.5,
+    numReviews: 210,
+    brand: "BoomBox",
+    features: ["Waterproof", "Bluetooth 5.1", "12-hour Battery"]
+  },
+  {
+    id: 5,
+    name: "Smartwatch Series 5",
+    description: "Stylish smartwatch with fitness tracking, heart rate monitor, and GPS.",
+    price: 250,
+    category: "Electronics",
+    stock: 60,
+    image: "https://images.unsplash.com/photo-1519744792095-2f2205e87b6f",
+    rating: 4.4,
+    numReviews: 198,
+    brand: "FitTime",
+    features: ["Heart Rate Monitor", "GPS Tracking", "Water Resistant"],
+    featured: true
+  },
+
+  // ===== Clothing =====
+  {
+    id: 6,
+    name: "Men’s Casual T-Shirt",
+    description: "Soft cotton T-shirt available in multiple colors for everyday comfort.",
+    price: 20,
+    category: "Clothing",
+    stock: 120,
+    image: "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb",
+    rating: 4.2,
+    numReviews: 65,
+    brand: "UrbanWear",
+    features: ["100% Cotton", "Breathable Fabric", "Machine Washable"]
+  },
+  {
+    id: 7,
+    name: "Women’s Denim Jacket",
+    description: "Classic denim jacket with a modern fit, perfect for layering in any season.",
+    price: 65,
+    category: "Clothing",
+    stock: 50,
+    image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246",
+    rating: 4.7,
+    numReviews: 180,
+    brand: "BlueStone",
+    features: ["Classic Fit", "Durable Denim", "Stylish Design"],
+    featured: true
+  },
+  {
+    id: 8,
+    name: "Unisex Hoodie",
+    description: "Comfortable hoodie made from premium fleece, ideal for casual wear.",
+    price: 40,
+    category: "Clothing",
+    stock: 90,
+    image: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0642",
+    rating: 4.5,
+    numReviews: 102,
+    brand: "CozyStyle",
+    features: ["Fleece Fabric", "Kangaroo Pocket", "Adjustable Hood"],
+    featured: true
+  },
+  {
+    id: 9,
+    name: "Men’s Running Shoes",
+    description: "Lightweight and breathable running shoes designed for comfort and performance.",
+    price: 85,
+    category: "Clothing",
+    stock: 75,
+    image: "https://images.unsplash.com/photo-1528701800489-20be2b1d8c3e",
+    rating: 4.6,
+    numReviews: 240,
+    brand: "RunPro",
+    features: ["Breathable Mesh", "Foam Cushioning", "Non-slip Sole"]
+  },
+  {
+    id: 10,
+    name: "Women’s Summer Dress",
+    description: "Floral print dress made with lightweight fabric for a breezy summer look.",
+    price: 55,
+    category: "Clothing",
+    stock: 60,
+    image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c",
+    rating: 4.8,
+    numReviews: 312,
+    brand: "FloraStyle",
+    features: ["Lightweight Fabric", "Floral Design", "Comfort Fit"]
+  },
+
+  // ===== Home & Garden =====
+  {
+    id: 11,
+    name: "Ceramic Vase Set",
+    description: "Elegant set of ceramic vases perfect for home decoration or flower arrangements.",
+    price: 35,
+    category: "Home & Garden",
+    stock: 40,
+    image: "https://images.unsplash.com/photo-1589227365533-cee630bd52f1",
+    rating: 4.4,
+    numReviews: 76,
+    brand: "DecoHome",
+    features: ["Ceramic Material", "Modern Design", "3-Piece Set"]
+  },
+  {
+    id: 12,
+    name: "LED Desk Lamp",
+    description: "Adjustable LED lamp with touch control, dimmable brightness, and USB charging port.",
+    price: 45,
+    category: "Home & Garden",
+    stock: 85,
+    image: "https://images.unsplash.com/photo-1582719478173-2f69b38b4d4e",
+    rating: 4.6,
+    numReviews: 140,
+    brand: "BrightLite",
+    features: ["Touch Control", "USB Charging", "Adjustable Arm"],
+    featured: true
+  },
+  {
+    id: 13,
+    name: "Bamboo Cutting Board",
+    description: "Durable and eco-friendly bamboo cutting board suitable for all kitchen uses.",
+    price: 25,
+    category: "Home & Garden",
+    stock: 100,
+    image: "https://images.unsplash.com/photo-1601042176919-81b5d3c6b8b2",
+    rating: 4.3,
+    numReviews: 97,
+    brand: "EcoChef",
+    features: ["Bamboo Material", "Knife Friendly", "Easy to Clean"]
+  },
+
+  // ===== Sports =====
+  {
+    id: 14,
+    name: "Yoga Mat Pro",
+    description: "High-density yoga mat providing excellent grip and cushioning for all workouts.",
+    price: 60,
+    category: "Sports",
+    stock: 80,
+    image: "https://images.unsplash.com/photo-1605296867304-46d5465a13f1",
+    rating: 4.7,
+    numReviews: 150,
+    brand: "FlexFit",
+    features: ["Non-slip Surface", "Extra Thick", "Eco-friendly Material"]
+  },
+  {
+    id: 15,
+    name: "Adjustable Dumbbell Set",
+    description: "Compact dumbbell set with adjustable weights, ideal for home strength training.",
+    price: 180,
+    category: "Sports",
+    stock: 45,
+    image: "https://images.unsplash.com/photo-1579758629934-095533049a4b",
+    rating: 4.8,
+    numReviews: 230,
+    brand: "PowerMax",
+    features: ["Adjustable Weight", "Durable Steel", "Space Saving Design"]
+  },
+];
+
+module.exports = products;
